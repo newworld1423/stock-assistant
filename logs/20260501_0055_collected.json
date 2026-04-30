@@ -1,0 +1,74 @@
+{
+  "krx": {
+    "date": "20260430",
+    "top_volume": [],
+    "foreign_buy": [],
+    "top_gainers": []
+  },
+  "global": {
+    "us_indices": {
+      "나스닥": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      },
+      "S&P500": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      },
+      "다우": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      },
+      "VIX": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      }
+    },
+    "forex": {
+      "USD_KRW": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      },
+      "USD_JPY": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      }
+    },
+    "commodities": {
+      "WTI": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      },
+      "금": {
+        "value": null,
+        "change_pct": null,
+        "change_abs": null
+      }
+    },
+    "us_sentiment": "알 수 없음"
+  },
+  "news": {
+    "news": [
+      {
+        "title": "한화솔루션 유상증자 또 제동&hellip;금감원 &quot;증권신고서 다시 내라&quot;"
+      },
+      {
+        "title": "한화솔루션 유증 또 제동 &hellip; 금감원, 2차 정정 요구"
+      },
+      {
+        "title": "금감원, 한화솔루션 유증 또 제동...2차 정정 요구"
+      },
+      {
+        "title": "&quot;노벨평화상 후보에 개인 208명&middot;단체 79개&quot;&hellip;한국 시민 등재 추정"
+      }
+    ],
+    "disclosures": []
+  }
+}
