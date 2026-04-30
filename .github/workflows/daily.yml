@@ -1,0 +1,33 @@
+name: 주식 비서 매일 실행
+
+on:
+  schedule:
+    # 매일 평일 오전 8:10 KST = UTC 23:10 (전날)
+    - cron: '10 23 * * 0-4'
+  workflow_dispatch:  # 수동 실행 버튼
+
+jobs:
+  run-stock-assistant:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 주식 비서 실행
+        env:
+          ANTHROPIC_API_KEY:     ${{ secrets.ANTHROPIC_API_KEY }}
+          KAKAO_CLIENT_ID:       ${{ secrets.KAKAO_CLIENT_ID }}
+          KAKAO_CLIENT_SECRET:   ${{ secrets.KAKAO_CLIENT_SECRET }}
+          KAKAO_ACCESS_TOKEN:    ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          KAKAO_REFRESH_TOKEN:   ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          MAX_PICKS:             "5"
+        run: python main.py
