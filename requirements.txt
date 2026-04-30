@@ -1,8 +1,10 @@
 pykrx==1.0.47
 yfinance==0.2.37
-anthropic==0.25.0
+anthropic==0.49.0
+httpx==0.27.0
 requests==2.31.0
 python-dotenv==1.0.0
 schedule==1.2.1
 pytz==2024.1
 pandas==2.2.0
+setuptools
