@@ -176,12 +176,13 @@ def _build_text(result: dict) -> str:
             f"\n{p['rank']}위 {RISK_EMOJI.get(risk,'🟡')} "
             f"{p['name']}({p['ticker']}) {p['market']}"
         )
+        close = p.get('close') or 0
         lines.append(f"  {STYLE_EMOJI.get(style,'📌')} {style}")
-        lines.append(f"  전일종가 {p.get('close',0):,}원")
-        lines.append(f"  📝 {p.get('reason','')}")
-        lines.append(f"  🎯 {p.get('entry_strategy','')}")
-        lines.append(f"  🛑 손절: {p.get('stop_loss','')}")
-        lines.append(f"  ✅ 목표1: {p.get('target_1','')}  목표2: {p.get('target_2','')}")
+        lines.append(f"  전일종가 {int(close):,}원")
+        lines.append(f"  📝 {p.get('reason') or ''}")
+        lines.append(f"  🎯 {p.get('entry_strategy') or ''}")
+        lines.append(f"  🛑 손절: {p.get('stop_loss') or ''}")
+        lines.append(f"  ✅ 목표1: {p.get('target_1') or ''}  목표2: {p.get('target_2') or ''}")
 
     avoid = result.get("avoid_today", [])
     if avoid:
